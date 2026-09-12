@@ -294,8 +294,10 @@ class _TelaPerfilState extends State<TelaPerfil> {
   }
 
   Widget _buildPreferencias() {
-    return Container(
-      decoration: _decoracaoCartao(),
+    return Material(
+      color: _cartao,
+      borderRadius: BorderRadius.circular(_raio),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
           SwitchListTile.adaptive(
@@ -360,8 +362,10 @@ class _TelaPerfilState extends State<TelaPerfil> {
   }
 
   Widget _buildInformacoesContato() {
-    return Container(
-      decoration: _decoracaoCartao(),
+    return Material(
+      color: _cartao,
+      borderRadius: BorderRadius.circular(_raio),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
           ListTile(

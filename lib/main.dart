@@ -6,10 +6,6 @@ void main() {
   runApp(const PerfilApp());
 }
 
-/// Aplicativo da Atividade Aula 04 - Perfil de Usuário.
-///
-/// Como o app possui uma única tela, ela é definida diretamente em `home:`
-/// do [MaterialApp], sem necessidade de rotas nomeadas.
 class PerfilApp extends StatelessWidget {
   const PerfilApp({super.key});
 
@@ -19,8 +15,11 @@ class PerfilApp extends StatelessWidget {
       title: 'Perfil de Usuário',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
+        colorSchemeSeed: const Color(0xFF007AFF),
+        scaffoldBackgroundColor: const Color(0xFFF2F2F7),
+        platform: TargetPlatform.iOS,
+        splashFactory: NoSplash.splashFactory,
       ),
       home: const TelaPerfil(),
     );
